@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Sakecart</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header>
+    <h1>Welcome to Sakecart</h1>
+    
+    <a href="index.html"><img src="logo.png" alt="logo" height="100" width="100" id="logo"></a>
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <div class="dropdown">
+                <li><a>Products</a></li>
+                <div class="dropdown-content">
+                    <a href="index.html#Laptops">Laptops and Accessories</a>
+                    <a href="index.html#TVs">TVs and Speakers</a>
+                    <a href="index.html#mobiles">Mobiles and Accessories</a>
+                </div>
+            </div>
+            <li><a href="index.html#aboutus">About Us</a></li>
+            <li><a href="index.html#contact">Contact</a></li>
+            <li class="show-cart" onclick="toggleCart()"><a>Cart</a></li><br>
+            
+        </ul>
+    </nav>
+</header>
+    
+    <!-- Cart Sidebar -->
+    <div id="cart-sidebar">
+        <h2>Your Cart</h2>
+        <div id="cart-items">
+            <p>No items in cart.</p>
+        </div>
+        <button onclick="clearCart()">Clear Cart</button>
+    </div>
+    <main>
+        <div class="product-details">
+            <img src="speaker.jpg" alt="Speakers">
+            <div>
+                <h2>Speakers</h2>
+                <p>Type: Bluetooth</p>
+                <p>Power Output: 20W</p>
+                <p>Battery Life: Up to 12 hours</p>
+                <p>Connectivity: Bluetooth 5.0, AUX</p>
+                <p>Water Resistance: IPX7</p>
+                <p>Price: $149</p>
+                <button onclick="addToCart('Speakers',149)">Add to Cart</button>
+                <button onclick="buyNow('Speakers',149)">Buy Now</button>
+            </div>
+        </div>
+        
+        <section id="reviews">
+            <h2>Reviews</h2>
+            <div class="review">
+                <h3>Chris Lee</h3>
+                <p>Clear sound and deep bass. The battery life is impressive too!</p>
+            </div>
+            <div class="review">
+                <h3>Sam Patel</h3>
+                <p>Good quality, portable and durable. Ideal for outdoor use.</p>
+            </div>
+            <form id="review-form">
+                <label for="reviewer-name">Name:</label>
+                <input type="text" id="reviewer-name" required>
+                <label for="review-text">Review:</label>
+                <textarea id="review-text" required></textarea>
+                <button type="submit">Submit Review</button>
+            </form>
+        </section>
+    </main>
+    <script src="Javascript.js"></script>
+</body>
+</html>

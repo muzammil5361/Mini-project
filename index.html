@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Sakecart</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header>
+    <h1>Welcome to Sakecart</h1>
+    
+    <a href="index.html"><img src="logo.png" alt="logo" height="100" width="100" id="logo"></a>
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <div class="dropdown">
+                <li><a>Products</a></li>
+                <div class="dropdown-content">
+                    <a href="index.html#Laptops">Laptops and Accessories</a>
+                    <a href="index.html#TVs">TVs and Speakers</a>
+                    <a href="index.html#mobiles">Mobiles and Accessories</a>
+                </div>
+            </div>
+            <li><a href="index.html#aboutus">About Us</a></li>
+            <li><a href="index.html#contact">Contact</a></li>
+            <li class="show-cart" onclick="toggleCart()"><a>Cart</a></li><br>
+            
+        </ul>
+    </nav>
+</header>
+<div id="cart-sidebar">
+    <h2>Your Cart</h2>
+    <div id="cart-items">
+        <p>No items in cart.</p>
+    </div>
+    <button onclick="clearCart()">Clear Cart</button>
+    <button onclick="buyNow(name)">Buy Now</button>
+</div>
+
+<main>
+    
+    <section id="home">
+        <img src="banner1.jpg" alt="banner" class="center">
+    </section>
+    
+    <section id="Laptops">
+        <h2>Laptops and Accessories</h2>
+        <div class="product-list">
+            <div class="product">
+                <a href="Laptop.html"><img src="laptop.jpg" alt="Laptop"></a>
+                <a href="Laptop.html"><h3>Laptop</h3></a>
+                <p>Core: i5 12th gen Ram: 8/16GB</p>
+                <button onclick="addToCart('Laptop', 999)">Add to Cart</button>
+            </div>
+            <div class="product">
+                <a href="Mouse.html"><img src="mouse.jpg" alt="Mouse"></a>
+                <a href="Mouse.html"><h3>Mouse</h3></a>
+                <p>Wireless, 1600 DPI</p>
+                <button onclick="addToCart('Mouse', 29)">Add to Cart</button>
+            </div>
+            <div class="product">
+                <a href="Keyboard.html"><img src="keyboard.jpg" alt="Keyboard"></a>
+                <a href="Keyboard.html"><h3>Keyboard</h3></a>
+                <p>Mechanical Keyboard, RGB</p>
+                <button onclick="addToCart('Keyboard', 150)">Add to Cart</button>
+            </div>
+        </div>
+    </section>
+    
+    <section id="TVs">
+        <h2>TVs and Speakers</h2>
+        <div class="product-list">
+            <div class="product">
+                <a href="TV.html"><img src="TV.jpg" alt="TV"></a>
+                <a href="TV.html"><h3>TV</h3></a>
+                <p>OLED TV</p>
+                <button onclick="addToCart('TV', 1200)">Add to Cart</button>
+            </div>
+            <div class="product">
+                <a href="Speakers.html"><img src="speaker.jpg" alt="Speakers"></a>
+                <a href="Speakers.html"><h3>Speakers</h3></a>
+                <p>Bluetooth, 20W Output</p>
+                <button onclick="addToCart('Speakers', 149)">Add to Cart</button>
+            </div>
+        </div>
+    </section>
+    
+    <section id="mobiles">
+        <h2>Mobiles and Accessories</h2>
+        <div class="product-list">
+            <div class="product">
+                <a href="Mobile.html"><img src="Mobile.jpg" alt="Mobile"></a>
+                <a href="Mobile.html"><h3>Mobile</h3></a>
+                <p>SmartPhone with 8/12GB Ram</p>
+                <button onclick="addToCart('Mobile', 799)">Add to Cart</button>
+            </div>
+            <div class="product">
+                <a href="Earphones.html"><img src="earphones.jpg" alt="Earphone"></a>
+                <a href="Earphones.html"><h3>Earphone</h3></a>
+                <p>Wired, Noise Isolation</p>
+                <button onclick="addToCart('Earphone', 49)">Add to Cart</button>
+            </div>
+        </div>
+    </section>
+    
+    <section id="aboutus">
+        <h2>About Us</h2>
+        <p>We are a leading e-commerce company dedicated to providing the best products and services to our customers. Our mission is to make shopping easy and enjoyable for everyone.</p>
+        <p>Our story began in 2024 when our founders saw a need for a reliable and user-friendly online shopping platform. Since then, we have grown into a trusted name in the e-commerce industry, offering a wide range of products from electronics to fashion.</p>
+    </section>
+    
+    <section id="contact">
+        <h2>Contact Us</h2>
+        <p>Mail: abcdef@bac.com</p>
+        <p>Phone: 1234567890</p>
+    </section>
+</main>
+
+<script src="Javascript.js"></script>
+</body>
+</html>

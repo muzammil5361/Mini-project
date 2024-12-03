@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Sakecart</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header>
+    <h1>Welcome to Sakecart</h1>
+    
+    <a href="index.html"><img src="logo.png" alt="logo" height="100" width="100" id="logo"></a>
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <div class="dropdown">
+                <li><a>Products</a></li>
+                <div class="dropdown-content">
+                    <a href="index.html#Laptops">Laptops and Accessories</a>
+                    <a href="index.html#TVs">TVs and Speakers</a>
+                    <a href="index.html#mobiles">Mobiles and Accessories</a>
+                </div>
+            </div>
+            <li><a href="index.html#aboutus">About Us</a></li>
+            <li><a href="index.html#contact">Contact</a></li>
+            <li class="show-cart" onclick="toggleCart()"><a>Cart</a></li><br>
+            
+        </ul>
+    </nav>
+</header>
+        
+        <!-- Cart Sidebar -->
+        <div id="cart-sidebar">
+            <h2>Your Cart</h2>
+            <div id="cart-items">
+                <p>No items in cart.</p>
+            </div>
+            <button onclick="clearCart()">Clear Cart</button>
+        </div><main>
+        <div class="product-details">
+            <img src="laptop.jpg" alt="Laptop">
+            <div>
+                <h2>Laptop</h2>
+                <p>Core: i5 12th gen</p>
+                <p>Ram: 8/16GB</p>
+                <p>Storage: 512GB SSD</p>
+                <p>Display: 15.6" Full HD</p>
+                <p>Battery Life: Up to 10 hours</p>
+                <p>Weight: 1.8kg</p>
+                <p>Price: $999</p>
+                <button onclick="addToCart('Laptop',999)">Add to Cart</button>
+                <button onclick="buyNow('Laptop',999)">Buy Now</button>
+            </div>
+        </div>
+        
+        <section id="reviews">
+            <h2>Reviews</h2>
+            <div class="review">
+                <h3>John Doe</h3>
+                <p>This laptop is fantastic! Great performance and build quality.</p>
+            </div>
+            <div class="review">
+                <h3>Jane Smith</h3>
+                <p>I love the display and the speed. Worth every penny!</p>
+            </div>
+            <form id="review-form">
+                <label for="reviewer-name">Name:</label>
+                <input type="text" id="reviewer-name" required>
+                <label for="review-text">Review:</label>
+                <textarea id="review-text" required></textarea>
+                <button type="submit">Submit Review</button>
+            </form>
+        </section>
+    </main>
+  
+    <script src="Javascript.js"></script>
+</body>
+</html>
